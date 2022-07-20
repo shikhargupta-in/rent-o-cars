@@ -4,16 +4,10 @@ const Booking = require("../models/bookingModel");
 const Car = require("../models/carModel");
 const { v4: uuidv4 } = require("uuid");
 const stripe = require("stripe")(
-  "sk_test_51LES9pSBzr9WyQPrlEJI1DIRbcfpSRI6BQ9lRcrrmtcyEUFownGOxi7p7dkO4NRR0CWuoWNmODMSvTLx2VmmAQRE00sLyzvQ5J"
+  "sk_test_51IYnC0SIR2AbPxU0EiMx1fTwzbZXLbkaOcbc2cXx49528d9TGkQVjUINJfUDAnQMVaBFfBDP5xtcHCkZG1n1V3E800U7qXFmGf"
 );
-
 router.post("/bookcar", async (req, res) => {
   const { token } = req.body;
-  const paymentIntent = await stripe.paymentIntents.create({
-  amount: 500,
-  currency: 'gbp',
-  payment_method: 'pm_card_visa',
-});
   try {
     const customer = await stripe.customers.create({
       email: token.email,

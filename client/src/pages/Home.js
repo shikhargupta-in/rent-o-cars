@@ -34,7 +34,7 @@ function Home() {
 
         for(var car of cars){
 
-              if(car.bookedTimeSlots.length == 0){
+              if(car.bookedTimeSlots.length === 0){
                   temp.push(car)
               }
               else{
@@ -78,7 +78,7 @@ function Home() {
 
              </Row>
 
-              {loading == true && (<Spinner/>)}
+              {loading === true && (<Spinner/>)}
 
 
               

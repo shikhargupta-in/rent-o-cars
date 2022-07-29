@@ -40,6 +40,13 @@ function Register() {
               <Input />
             </Form.Item>
             <Form.Item
+              name="email"
+              label="Email ID"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
               name="password"
               label="Password"
               rules={[{ required: true }]}
@@ -49,6 +56,13 @@ function Register() {
             <Form.Item
               name="cpassword"
               label="Confirm Password"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="mobile"
+              label="Mobile Number"
               rules={[{ required: true }]}
             >
               <Input />
